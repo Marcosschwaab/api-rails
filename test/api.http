@@ -1,0 +1,43 @@
+GET http://localhost:3000/api/v1/articles HTTP/1.1
+content-type: application/json
+
+###
+
+GET  http://localhost:3000/api/v1/articles/1 HTTP/1.1
+content-type: application/json
+###
+
+GET  http://localhost:3000/api/v1/articles/2 HTTP/1.1
+content-type: application/json
+
+###
+POST  http://localhost:3000/api/v1/articles HTTP/1.1
+content-type: application/json
+Authorization: Bearer ACCESS-TOKEN
+
+{
+    "title": "sample",
+    "body": "Teste de create",
+    "author": "Marcos"
+}
+###
+PUT  http://localhost:3000/api/v1/articles/2 HTTP/1.1
+content-type: application/json
+Authorization: Bearer ACCESS-TOKEN
+
+{
+    "title": "sample2",
+    "body": "Teste de create",
+    "author": "Maisa"
+}
+
+###
+DELETE  http://localhost:3000/api/v1/articles/2 HTTP/1.1
+content-type: application/json
+Authorization: Bearer ACCESS-TOKEN
+
+{
+    "title": "sample2",
+    "body": "Teste de create",
+    "author": "Maisa"
+}
